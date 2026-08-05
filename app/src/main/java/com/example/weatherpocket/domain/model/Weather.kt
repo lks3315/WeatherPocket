@@ -4,7 +4,7 @@ import java.time.Instant
 import java.time.LocalDate
 import java.time.LocalDateTime
 
-data class Whather(
+data class Weather(
     val placeId: Long,
     val current: CurrentWeather,
     val dailyForecasts: List<DailyForecast>,
