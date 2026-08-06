@@ -6,7 +6,7 @@ data class Place(
     val name: String,
     val country: String,
     val countryCode: String,
-    val adminArea: String,
+    val adminArea: String?,
     val latitude: Double,
     val longitude: Double,
     val timeZoneId: String,
