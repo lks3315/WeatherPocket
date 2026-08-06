@@ -9,6 +9,10 @@ lifecycleRuntimeKtx = "2.10.0"
 activityCompose = "1.8.0"
 composeBom = "2024.09.00"
 coroutines = "1.9.0"
+# 코틀린 코드를 분석하고 Room 구현 코드를 생성하는 KSP 플러그인
+ksp = "2.0.21-1.0.28"
+# SQLite 데이터베이스를 편리하게 사용하는 Room library
+room = "2.7.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -30,9 +34,21 @@ androidx-lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "l
 androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleRuntimeKtx" }
 kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
 kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
+# Room의 기본 실행 기능
+androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+# Room에서 Coroutine과 Flow를 사용할 수 있게 해주는 확장 기능
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+# @Entity, @Dao 등을 읽고 실제 구현 코드를 생성하는 컴파일러
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+# Room 데이터베이스 테스트를 위한 도구
+androidx-room-testing = { group = "androidx.room", name = "room-testing", version.ref = "room" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+# Kotlin Symbol Processing 플러그인
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+# Room 스키마 파일을 관리하는 Gradle 플러그인
+androidx-room = { id = "androidx.room", version.ref = "room" }
 
