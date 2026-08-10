@@ -38,7 +38,7 @@ interface PlacesDao {
      * 같은 place_id가 있으면 UPDATE 수행한다.
      */
     @Upsert
-    suspend fun upsertPlace(place: PlaceEntity)
+    suspend fun upsertPlace(placeEntity: PlaceEntity)
 
     // 장소 식별자에 해당하는 관심 도시를 삭제한다.
     @Query(
