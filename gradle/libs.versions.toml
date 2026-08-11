@@ -15,6 +15,11 @@ ksp = "2.0.21-1.0.28"
 room = "2.7.2"
 junitKtx = "1.3.0"
 coreKtxVersion = "1.7.0"
+# HTTP 통신을 위한 Retrofit
+retrofit = "3.0.0"
+# JSON 과 Kotlin 객체를 서로 변환 하는 Serializaion
+serialization = "1.7.3"
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -46,6 +51,12 @@ androidx-room-compiler = { group = "androidx.room", name = "room-compiler", vers
 androidx-room-testing = { group = "androidx.room", name = "room-testing", version.ref = "room" }
 androidx-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "junitKtx" }
 core-ktx = { group = "androidx.test", name = "core-ktx", version.ref = "coreKtxVersion" }
+# Retrofit 기본 HTTP 통신 기능
+retrofit-core = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+# Retrofit 응답 JSON을 Kotlin Serialization으로 변환
+retrofit-converter-kotlinx-serialization = { group = "com.squareup.retrofit2", name = "converter-kotlinx-serialization", version.ref = "retrofit" }
+# JSON 문자열과 Kotlin 객체를 서로 변환
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "serialization" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -55,4 +66,6 @@ kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "ko
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 # Room 스키마 파일을 관리하는 Gradle 플러그인
 androidx-room = { id = "androidx.room", version.ref = "room" }
+# @Serializable 이 붙은 클래스의 변환 코드를 생성하는 컴파일러 플러그인
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 

@@ -69,7 +69,7 @@ class PlaceDaoTest {
     }
 
     /**
-     * observeSavedPlaces()가 장소를 이름순으로 반환하는지 검증한다.
+     * observeSavedPlaces()가 장소를 이름순으로 반환하는 지 검증한다.
      */
     @Test
     fun placesAreOrderedByName() {
