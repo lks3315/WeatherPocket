@@ -1,6 +1,6 @@
 package com.example.weatherpocket.domain.model
 
-// Location 대신 Place 사용하는 이유는 Android의 Location api와 혼동을 피하기 위함
+// Location 대신 Place 사용하는 이유는 Android 의 Location api 와 혼동을 피하기 위함
 data class Place(
     val id: Long,
     val name: String,

@@ -7,7 +7,7 @@ plugins {
     // Room 데이터베이스 스키마 파일을 관리한다.
     alias(libs.plugins.androidx.room)
     // 하위 모듈에서 Kotlin Serialization 을 사용할 수 있도록 등록한다.
-    alias(libs.plugins.kotlin.serialization) apply false
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
